@@ -19,7 +19,7 @@ console.log('Merge: -->',mergeSort(array3));
         return array;
      let arrayHolder1 = (mergeSort(array.slice(0,array.length/2))) 
      let arrayHolder2 = (mergeSort(array.slice(array.length/2)));
-  if(arrayHolder1.length>1 || arrayHolder2.length>1){
+  if(arrayHolder1.length>=1 || arrayHolder2.length>=1){
   while(arrayHolder1.length != 0 && arrayHolder2.length !=0){
         if(arrayHolder1[0] < arrayHolder2[0]){
             newArray.push(arrayHolder1.shift());
@@ -35,11 +35,7 @@ console.log('Merge: -->',mergeSort(array3));
         }
       }
 }
-     else if(arrayHolder1[0] > arrayHolder2[0]){
-         return   arrayHolder2.concat(arrayHolder1);
-     } 
-     return  arrayHolder1.concat(arrayHolder2);
-   
+ 
 
   }
 
